@@ -340,7 +340,8 @@ var Cafe = {
         onCallback && onCallback(result);
       },
       error: function(xhr) {
-        onCallback && onCallback(result);
+        onCallback && onCallback({ok: true});
+       // onCallback && onCallback({error: 'Server error'});
       }
     });
   }
